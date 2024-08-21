@@ -1,0 +1,25 @@
+@use '../../variables' as *;
+
+$padding-y: .75rem;
+$padding-x: 0;
+
+$font-size: .875rem;
+$font-weight: 600;
+
+$theme-colors: (
+    'default': (
+        'bg': map-get($colors, 'primary-500'),
+        'border': transparent,
+        'text': map-get($colors, 'neutral-0'),
+    ),
+    'dark': (
+        'bg': map-get($colors, 'neutral-900'),
+        'border': transparent,
+        'text': map-get($colors, 'neutral-0'),
+    ),
+    'light': (
+        'bg': map-get($colors, 'neutral-100'),
+        'border': map-get($colors, 'neutral-200'),
+        'text': map-get($colors, 'neutral-900'),
+    ),
+);

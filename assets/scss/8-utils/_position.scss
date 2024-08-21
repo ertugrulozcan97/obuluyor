@@ -1,0 +1,116 @@
+$position-values: (
+    static,
+    relative,
+    absolute,
+    fixed,
+    sticky,
+);
+
+@each $position-value in $position-values {
+    .position-#{$position-value} {
+        position: $position-value !important;
+    }
+}
+
+$position-number-values: (
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    14,
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60,
+    64,
+    72,
+    80,
+    96,
+);
+
+@each $number in $position-number-values {
+    .top-#{$number}-px {
+        top: #{$number}#{"px"} !important;
+    }
+
+    .right-#{$number}-px {
+        right: #{$number}#{"px"} !important;
+    }
+
+    .bottom-#{$number}-px {
+        bottom: #{$number}#{"px"} !important;
+    }
+
+    .left-#{$number}-px {
+        left: #{$number}#{"px"} !important;
+    }
+}
+
+$position-percent-values: (
+    0,
+    25,
+    50,
+    75,
+    100,
+);
+
+@each $percent in $position-percent-values {
+    .top-#{$percent} {
+        top: #{$percent}#{"%"} !important;
+    }
+
+    .right-#{$percent} {
+        right: #{$percent}#{"%"} !important;
+    }
+
+    .bottom-#{$percent} {
+        bottom: #{$percent}#{"%"} !important;
+    }
+
+    .left-#{$percent} {
+        left: #{$percent}#{"%"} !important;
+    }
+}
+
+// transform translate y
+
+@each $number in $position-number-values {
+    .translate-y-#{$number}-px {
+        transform: translateY(-#{$number}#{"px"}) !important;
+    }
+}
+
+@each $percent in $position-percent-values {
+    .translate-y-#{$percent} {
+        transform: translateY(-#{$percent}#{"%"}) !important;
+    }
+}
+
+// transform translate x
+@each $number in $position-number-values {
+    .translate-x-#{$number}-px {
+        transform: translateX(-#{$number}#{"px"}) !important;
+    }
+}
+
+@each $percent in $position-percent-values {
+    .translate-x-#{$percent} {
+        transform: translateX(-#{$percent}#{"%"}) !important;
+    }
+}

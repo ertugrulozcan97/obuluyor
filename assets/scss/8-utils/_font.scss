@@ -1,0 +1,33 @@
+@each $key, $value in $font-sizes {
+    .fs-#{$key} {
+        font-size: $value !important;
+    }
+}
+
+// repsonsive
+@each $breakpointKey, $breakpointValue in $breakpoints {
+    @each $key, $value in $font-sizes {
+        .fs-#{$breakpointKey}-#{$key} {
+            @include media-up($breakpointKey) {
+                font-size: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $font-weights {
+    .fw-#{$value} {
+        font-weight: $value !important;
+    }
+}
+
+// repsonsive
+@each $breakpointKey, $breakpointValue in $breakpoints {
+    @each $key, $value in $font-weights {
+        .fw-#{$breakpointKey}-#{$value} {
+            @include media-up($breakpointKey) {
+                font-weight: $value !important;
+            }
+        }
+    }
+}

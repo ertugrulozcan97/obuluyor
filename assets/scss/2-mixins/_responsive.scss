@@ -1,0 +1,15 @@
+@mixin media-up($breakpoint) {
+    $breakpoint: map-get($breakpoints, $breakpoint);
+    
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin media-down($breakpoint) {
+    $breakpoint: map-get($breakpoints, $breakpoint);
+    
+    @media (max-width: $breakpoint - 1) {
+        @content;
+    }
+}

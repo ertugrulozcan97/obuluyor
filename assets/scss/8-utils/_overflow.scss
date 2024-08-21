@@ -1,0 +1,25 @@
+$overflow-values: (
+    visible: visible,
+    hidden: hidden,
+    scroll: scroll,
+    auto: auto,
+);
+
+@each $overflow, $value in $overflow-values {
+    .overflow-#{$overflow} {
+        overflow: $value !important;
+    }
+}
+
+$overflow-directions: (
+    x: x,
+    y: y,
+);
+
+@each $direction, $value in $overflow-directions {
+    @each $overflow, $value in $overflow-values {
+        .overflow-#{$direction}-#{$overflow} {
+            overflow-#{$direction}: $value !important;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+$whitespace-values: (
+    normal: normal,
+    nowrap: nowrap,
+    pre: pre,
+    'pre-line': pre-line,
+    'pre-wrap': pre-wrap,
+);
+
+@each $whitespace, $value in $whitespace-values {
+    .whitespace-#{$whitespace} {
+        white-space: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @each $whitespace, $value in $whitespace-values {
+        .whitespace-#{$breakpoint}-#{$whitespace} {
+            @include media-up($breakpoint) {
+                white-space: $value !important;
+            }
+        }
+    }
+}

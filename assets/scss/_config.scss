@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+$base-font-family: 'Inter', sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+$transition-duration: 0.3s;
+$transition-timing-function: ease;
+
+$grid-container-padding: .9375rem;
+
+$border-default: map-get($colors, 'neutral-300');
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    3xl: 1600px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1170px,
+    xxl: 1260,
+    3xl: 1400px
+);

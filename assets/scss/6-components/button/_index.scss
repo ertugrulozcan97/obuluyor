@@ -1,0 +1,61 @@
+@use 'settings' as settings;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: settings.$content-gap;
+    padding: settings.$padding-y settings.$padding-x;
+    font-size: settings.$font-size;
+    font-weight: settings.$font-weight;
+    border-radius: settings.$border-radius;
+    transition: all $transition-duration $transition-timing-function;
+}
+
+.btn-icon {
+    font-size: settings.$icon-size;
+    color: inherit;
+}
+
+// Themes
+.btn
+{
+    @each $color, $state in settings.$theme-colors
+    {
+        $state-default: map-get($state, 'default');
+        $state-hover: map-get($state, 'hover');
+        $state-focus: map-get($state, 'focus');
+        $state-active: map-get($state, 'active');
+        $state-disabled: map-get($state, 'disabled');
+        $state-selected: map-get($state, 'selected');
+
+        &.btn-#{$color}
+        {
+            background-color: #{map-get($state-default, 'bg')};
+            color: #{map-get($state-default, 'text')};
+            border-color: #{map-get($state-default, 'border')};
+
+            @if map-has-key($state, 'hover')
+            {
+                &:hover,
+                &:focus
+                {
+                    background-color: #{map-get($state-hover, 'bg')};
+                    color: #{map-get($state-hover, 'text')};
+                    border-color: #{map-get($state-hover, 'border')};
+                    box-shadow: 0 0 0 4px #{map-get($state-hover, 'shadow')};
+                }
+            }
+
+            @if map-has-key($state, 'active')
+            {
+                &:active
+                {
+                    background-color: #{map-get($state-active, 'bg')};
+                    color: #{map-get($state-active, 'text')};
+                    border-color: #{map-get($state-active, 'border')};
+                    box-shadow: 0 0 0 4px #{map-get($state-active, 'shadow')};
+                }
+            }
+        }
+    }
+}

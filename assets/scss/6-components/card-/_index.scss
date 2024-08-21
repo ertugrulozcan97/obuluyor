@@ -1,0 +1,74 @@
+@use './settings' as settings;
+
+.card
+{
+    position: relative;
+}
+
+.card-input
+{
+    border-width: map-get(settings.$input, 'border-width');
+    border-style: solid;
+    border-color: transparent;
+    padding: map-get(settings.$input, 'padding-y') map-get(settings.$input, 'padding-x');
+    padding-right: #{map-get(settings.$button, 'width')};
+    border-radius: map-get(settings.$input, 'border-radius');
+    font-size: map-get(settings.$input, 'font-size');
+    font-weight: map-get(settings.$input, 'font-weight');
+    transition: $transition-duration $transition-timing-function;
+    width: 100%;
+}
+
+.card-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: #{map-get(settings.$button, 'height')};
+    width: #{map-get(settings.$button, 'width')};
+    font-size: map-get(settings.$button, 'font-size');
+    font-weight: map-get(settings.$button, 'font-weight');
+}
+
+.card
+{
+    @each $color, $state in settings.$theme-colors-container
+    {
+        $state-default: map-get($state, 'default');
+        
+        $input-state-default: map-get(settings.$theme-colors-input, $color);
+        $input-state-focus: map-get(settings.$theme-colors-input, $color);
+        
+        $input-bg: map-get(map-get($input-state-default, 'default'), 'bg');
+        $input-text: map-get(map-get($input-state-default, 'default'), 'text');
+        $input-placeholder: map-get(map-get($input-state-default, 'default'), 'placeholder');
+
+        $button-state-default: map-get(settings.$theme-colors-button, $color);
+
+        &.card-#{$color}
+        {
+            .card-input
+            {
+                background-color: $input-bg;
+                border-color: map-get(map-get($input-state-default, 'default'), 'border');
+                color: $input-text;
+
+                &::placeholder
+                {
+                    color: $input-placeholder;
+                }
+
+                &:focus
+                {
+                    background-color: map-get(map-get($input-state-focus, 'focus'), 'bg');
+                    color: map-get(map-get($input-state-focus, 'focus'), 'text');
+                    border-color: map-get(map-get($input-state-focus, 'focus'), 'border');
+                }
+            }
+
+            .card-btn
+            {
+                color: map-get(map-get($button-state-default, 'default'), 'text');
+            }
+        }
+    }
+}

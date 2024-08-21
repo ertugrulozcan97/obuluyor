@@ -1,0 +1,44 @@
+$text-alignments: (
+    start: left,
+    end: right,
+    center: center,
+    justify: justify,
+    justify-all: justify-all,
+);
+
+@each $alignment, $value in $text-alignments {
+    .text-#{$alignment} {
+        text-align: $value !important;
+    }
+}
+
+$truncate-lines: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+);
+
+@each $line, $value in $truncate-lines {
+    .truncate-#{$line} {
+        overflow: hidden !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: $value !important;
+        -webkit-box-orient: vertical !important;
+    }
+}
+
+$line-heights: (
+    1: 1,
+    2: 1.25,
+    3: 1.5,
+    4: 1.75,
+    5: 2,
+);
+
+@each $line, $value in $line-heights {
+    .lh-#{$line} {
+        line-height: $value !important;
+    }
+}

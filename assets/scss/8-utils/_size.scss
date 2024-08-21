@@ -1,0 +1,40 @@
+// 5 px to 200px in 5px increments
+
+@for $i from 0 through 500 {
+    $value : $i;
+    $size : $i * 5px;
+    $sizeValue: $i * 5;
+
+    .w-#{$sizeValue}-px {
+        width: $size !important;
+    }
+
+    .h-#{$sizeValue}-px {
+        height: $size !important;
+    }
+
+    // percentage
+    .w-#{$value} {
+        width: #{$value}#{"%"} !important;
+    }
+
+    .h-#{$value} {
+        height: #{$value}#{"%"} !important;
+    }
+
+    .max-h-#{$sizeValue}-px {
+        max-height: $size !important;
+    }
+
+    .max-w-#{$sizeValue}-px {
+        max-width: $size !important;
+    }
+
+    .min-h-#{$sizeValue}-px {
+        min-height: $size !important;
+    }
+
+    .min-w-#{$sizeValue}-px {
+        min-width: $size !important;
+    }
+}

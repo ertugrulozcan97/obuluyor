@@ -1,0 +1,53 @@
+$transition-styles: (
+    all: all,
+    background-color: background-color,
+    border: border,
+    border-color: border-color,
+    border-radius: border-radius,
+    box-shadow: box-shadow,
+    color: color,
+    fill: fill,
+    font-size: font-size,
+    height: height,
+    margin: margin,
+    opacity: opacity,
+    padding: padding,
+    stroke: stroke,
+    transform: transform,
+    width: width,
+    visibility: visibility,
+);
+
+@each $transition, $property in $transition-styles {
+    .transition-#{$transition} {
+        transition: $property .15s ease-in-out !important;
+    }
+}
+
+// Scale
+
+$scale-values: (
+    0: 0,
+    1: .25,
+    2: .5,
+    3: .75,
+    4: 1,
+    5: 1.15,
+    6: 1.25,
+    7: 1.5,
+    8: 2,
+    9: 3,
+    10: 4,
+);
+
+@each $scale, $value in $scale-values {
+    .scale-#{$scale} {
+        transform: scale($value) !important;
+    }
+}
+
+@each $scale, $value in $scale-values {
+    .scale-hover-#{$scale}:hover {
+        transform: scale($value) !important;
+    }
+}

@@ -1,0 +1,118 @@
+@use 'settings' as settings;
+
+.ad-nav {
+    border-width: map-get(settings.$container, 'border-width');
+    border-style: map-get(settings.$container, 'border-style');
+    border-radius: map-get(settings.$container, 'border-radius');
+}
+
+.ad-nav-section {
+    &-header {
+        display: flex;
+        align-items: center;
+        padding: map-get(settings.$section, 'header-padding-y') map-get(settings.$section, 'header-padding-x');
+        gap: map-get(settings.$section, 'header-content-gap');
+        border-bottom-width: map-get(settings.$section, 'header-border-width');
+        border-bottom-style: map-get(settings.$section, 'header-border-style');
+    }
+
+    &-icon {
+        font-size: map-get(settings.$section, 'header-icon-size');
+    }
+
+    &-img {
+        width: map-get(settings.$section, 'header-icon-img-size');
+        height: map-get(settings.$section, 'header-icon-img-size');
+    }
+
+    &-label {
+        font-size: map-get(settings.$section, 'header-label-font-size');
+        font-weight: map-get(settings.$section, 'header-label-font-weight');
+    }
+
+    &-body {
+        padding: map-get(settings.$section, 'body-padding-y') map-get(settings.$section, 'body-padding-x');
+    }
+}
+
+.ad-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: map-get(settings.$menu, 'content-gap');
+    padding-left: map-get(settings.$menu, 'padding-start');
+
+    a {
+        display: block;
+        position: relative;
+        font-size: map-get(settings.$menu, 'item-font-size');
+        font-weight: map-get(settings.$menu, 'item-font-weight');
+        transition: $transition-duration $transition-timing-function;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::before {
+            font-family: 'Font Awesome 6 Pro';
+            font-weight: 900;
+            content: '\f061';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateX(-1.5rem) translateY(-50%);
+            font-size: .8125rem;
+        }
+    }
+
+    &-item-count {
+        font-size: map-get(settings.$menu, 'item-count-font-size');
+        font-weight: map-get(settings.$menu, 'item-count-font-weight');
+    }
+}
+
+.ad-nav
+{
+    @each $color, $state in settings.$theme-colors-container
+    {
+        @if ($color == 'default')
+        {
+            background-color: map-get($state, 'bg');
+            border-color: map-get($state, 'border');
+
+            .ad-nav-section
+            {
+                $section-state: map-get(settings.$theme-colors-section, $color);
+
+                &-header
+                {
+                    border-bottom-color: map-get($section-state, 'border');
+                }
+
+                &-label
+                {
+                    color: map-get($section-state, 'label');
+                }
+            }
+
+            .ad-nav-menu
+            {
+                $menu-state: map-get(settings.$theme-colors-menu, $color);
+
+                a
+                {
+                    color: #{map-get($menu-state, 'item')};
+
+                    &:hover
+                    {
+                        color: #{map-get($menu-state, 'item-hover')};
+                    }
+                }
+
+                &-item-count
+                {
+                    color: map-get($menu-state, 'item-count');
+                }
+            }
+        }
+    }
+}

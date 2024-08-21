@@ -1,0 +1,144 @@
+$sizing-numbers: (
+    0, 2, 4, 6, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 350, 360, 380, 400, 450, 500,
+    25, 50, 75, 72
+);
+
+@each $number in $sizing-numbers {
+    .w-#{$number} {
+        width: #{$number}#{"%"} !important;
+        flex: 0 0 #{$number}#{"%"} !important;
+    }
+
+    .w-#{$number}-px {
+        width: #{$number}#{"px"} !important;
+        flex: 0 0 #{$number}#{"px"} !important;
+    }
+}
+
+// responsive
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $number in $sizing-numbers {
+            .w-#{$breakpoint}-#{$number} {
+                width: #{$number}#{"%"} !important;
+                flex: 0 0 #{$number}#{"%"} !important;
+            }
+
+            .w-#{$breakpoint}-#{$number}-px {
+                width: #{$number}#{"px"} !important;
+                flex: 0 0 #{$number}#{"px"} !important;
+            }
+        }
+    }
+}
+
+@each $number in $sizing-numbers {
+    .max-w-#{$number} {
+        max-width: #{$number}#{"%"} !important;
+    }
+
+    .max-w-#{$number}-px {
+        max-width: #{$number}#{"px"} !important;
+    }
+
+    .min-w-#{$number} {
+        min-width: #{$number}#{"%"} !important;
+    }
+
+    .min-w-#{$number}-px {
+        min-width: #{$number}#{"px"} !important;
+    }
+}
+
+// responsive
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $number in $sizing-numbers {
+            .min-w-#{$breakpoint}-#{$number} {
+                min-width: #{$number}#{"%"} !important;
+            }
+
+            .min-w-#{$breakpoint}-#{$number}-px {
+                min-width: #{$number}#{"px"} !important;
+            }
+
+            .max-w-#{$breakpoint}-#{$number} {
+                max-width: #{$number}#{"%"} !important;
+            }
+
+            .max-w-#{$breakpoint}-#{$number}-px {
+                max-width: #{$number}#{"px"} !important;
+            }
+        }
+    }
+}
+
+@each $number in $sizing-numbers {
+    .h-#{$number} {
+        height: #{$number}#{"%"} !important;
+    }
+
+    .h-#{$number}-px {
+        height: #{$number}#{"px"} !important;
+    }
+}
+
+// responsive
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $number in $sizing-numbers {
+            .h-#{$breakpoint}-#{$number} {
+                height: #{$number}#{"%"} !important;
+            }
+
+            .h-#{$breakpoint}-#{$number}-px {
+                height: #{$number}#{"px"} !important;
+            }
+        }
+    }
+}
+
+@each $number in $sizing-numbers {
+    .max-h-#{$number} {
+        max-height: #{$number}#{"%"} !important;
+    }
+
+    .max-h-#{$number}-px {
+        max-height: #{$number}#{"px"} !important;
+    }
+
+    .min-h-#{$number} {
+        min-height: #{$number}#{"%"} !important;
+    }
+
+    .min-h-#{$number}-px {
+        min-height: #{$number}#{"px"} !important;
+    }
+}
+
+// responsive
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $number in $sizing-numbers {
+            .min-h-#{$breakpoint}-#{$number} {
+                min-height: #{$number}#{"%"} !important;
+            }
+
+            .min-h-#{$breakpoint}-#{$number}-px {
+                min-height: #{$number}#{"px"} !important;
+            }
+
+            .max-h-#{$breakpoint}-#{$number} {
+                max-height: #{$number}#{"%"} !important;
+            }
+
+            .max-h-#{$breakpoint}-#{$number}-px {
+                max-height: #{$number}#{"px"} !important;
+            }
+        }
+    }
+}

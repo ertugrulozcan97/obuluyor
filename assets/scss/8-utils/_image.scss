@@ -1,0 +1,14 @@
+$object-fit-options: (
+    cover,
+    contain,
+    fill,
+    none,
+    scale-down,
+    unset,
+);
+
+@each $option in $object-fit-options {
+    .object-fit-#{$option} {
+        object-fit: $option !important;
+    }
+}

@@ -1,0 +1,94 @@
+$border-aligns: (
+    top: top,
+    end: right,
+    bottom: bottom,
+    start: left,
+    none: none,
+);
+
+.border {
+    border: 1px solid $border-default !important;
+}
+
+@each $border-align-name, $border-align in $border-aligns {
+    .border-#{$border-align-name} {
+        border-#{$border-align}: 1px solid $border-default !important;
+    }
+
+    .border-#{$border-align}-none {
+        border-#{$border-align}: none !important;
+    }
+}
+
+.border-none {
+    border: none !important;
+}
+
+@each $color, $value in $colors {
+    .border-#{$color} {
+        border-color: $value !important;
+    }
+}
+
+// Border align & color
+@each $border-align-name, $border-align in $border-aligns {
+    @each $color, $value in $colors {
+        .border-#{$border-align-name}-#{$color} {
+            border-#{$border-align}-color: $value !important;
+        }
+    }
+}
+
+$border-styles: (
+    solid: solid,
+    dashed: dashed,
+    dotted: dotted,
+    double: double,
+    groove: groove,
+    ridge: ridge,
+    inset: inset,
+    outset: outset,
+    none: none,
+);
+
+@each $border-style-name, $border-style in $border-styles {
+    .border-#{$border-style-name} {
+        border-style: $border-style !important;
+    }
+}
+
+@each $border-align-name, $border-align in $border-aligns {
+    @each $border-style-name, $border-style in $border-styles {
+        .border-#{$border-align}-#{$border-style-name} {
+            border-#{$border-align}-style: $border-style !important;
+        }
+    }
+}
+
+$border-widths: (
+    0: 0,
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    6: 6px,
+    7: 7px,
+    8: 8px,
+    9: 9px,
+    10: 10px,
+);
+
+@each $border-width-name, $border-width in $border-widths {
+    .border-w-#{$border-width-name} {
+        border-width: $border-width !important;
+    }
+}
+
+@each $border-align-name, $border-align in $border-aligns {
+    @each $border-width-name, $border-width in $border-widths {
+        .border-#{$border-align-name}-w-#{$border-width-name} {
+            border-#{$border-align}-width: $border-width !important;
+        }
+    }
+}

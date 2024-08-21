@@ -1,0 +1,6 @@
+@function get-color($color) {
+    // remove the quotes from the color
+    $color: str-slice($color, 2, -2);
+    
+    @return $color;
+}

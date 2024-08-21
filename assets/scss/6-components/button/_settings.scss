@@ -1,0 +1,203 @@
+@use '../../variables' as *;
+
+$padding-x: .75rem;
+$padding-y: 0.5rem;
+
+$content-gap: 0.5rem;
+
+$font-size: .875rem;
+$font-weight: 600;
+
+$icon-size: 1.25rem;
+$icon-spacing: 0.5rem;
+
+$border-radius: 0.25rem;
+$border-width: 1px;
+$border-color: transparent;
+
+$theme-colors: (
+    'primary': (
+        'default': (
+            'bg': map-get($colors, 'primary-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': transparent
+        ),
+        'hover': (
+            'bg': map-get($colors, 'primary-600'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': map-get($colors, 'primary-100')
+        ),
+        'active': (
+            'bg': map-get($colors, 'primary-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': transparent
+        ),
+    ),
+    'secondary': (
+        'default': (
+            'bg': map-get($colors, 'secondary-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+        'hover': (
+            'bg': map-get($colors, 'secondary-600'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': map-get($colors, 'secondary-100')
+        ),
+        'active': (
+            'bg': map-get($colors, 'secondary-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+    ),
+    'success': (
+        'default': (
+            'bg': map-get($colors, 'success-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+        'hover': (
+            'bg': map-get($colors, 'success-600'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': map-get($colors, 'success-100')
+        ),
+        'active': (
+            'bg': map-get($colors, 'success-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+    ),
+    'danger': (
+        'default': (
+            'bg': map-get($colors, 'danger-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+        'hover': (
+            'bg': map-get($colors, 'danger-600'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': map-get($colors, 'danger-100')
+        ),
+        'active': (
+            'bg': map-get($colors, 'danger-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+    ),
+    'warning': (
+        'default': (
+            'bg': map-get($colors, 'warning-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': transparent
+        ),
+        'hover': (
+            'bg': map-get($colors, 'warning-600'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': map-get($colors, 'warning-100')
+        ),
+        'active': (
+            'bg': map-get($colors, 'warning-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': transparent
+        ),
+    ),
+    'info': (
+        'default': (
+            'bg': map-get($colors, 'info-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+        'hover': (
+            'bg': map-get($colors, 'info-600'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': map-get($colors, 'info-100')
+        ),
+        'active': (
+            'bg': map-get($colors, 'info-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+    ),
+    'light': (
+        'default': (
+            'bg': map-get($colors, 'neutral-200'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': transparent
+        ),
+        'hover': (
+            'bg': map-get($colors, 'neutral-500'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': map-get($colors, 'neutral-300')
+        ),
+        'active': (
+            'bg': map-get($colors, 'neutral-200'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-800'),
+            'icon': map-get($colors, 'neutral-800'),
+            'shadow': transparent
+        ),
+    ),
+    'dark': (
+        'default': (
+            'bg': map-get($colors, 'neutral-800'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+        'hover': (
+            'bg': map-get($colors, 'neutral-900'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': map-get($colors, 'neutral-700')
+        ),
+        'active': (
+            'bg': map-get($colors, 'neutral-800'),
+            'border': transparent,
+            'text': map-get($colors, 'neutral-0'),
+            'icon': map-get($colors, 'neutral-0'),
+            'shadow': transparent
+        ),
+    ),
+);

@@ -1,0 +1,29 @@
+$display-properties: (
+    none,
+    block,
+    inline-block,
+    inline,
+    flex,
+    inline-flex,
+    grid,
+    inline-grid,
+    table,
+    table-row,
+    table-cell,
+);
+
+@each $property in $display-properties {
+    .d-#{$property} {
+        display: $property !important;
+    }
+}
+
+@each $breakpointKey, $breakpointValue in $breakpoints {
+    @each $property in $display-properties {
+        .d-#{$breakpointKey}-#{$property} {
+            @include media-up($breakpointKey) {
+                display: $property !important;
+            }
+        }
+    }
+}

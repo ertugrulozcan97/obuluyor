@@ -1,0 +1,145 @@
+$flex-align-items: (
+    start,
+    end,
+    center,
+    baseline,
+    stretch,
+);
+
+@each $align in $flex-align-items {
+    .align-items-#{$align} {
+        align-items: $align !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $align in $flex-align-items {
+            .align-items-#{$breakpoint}-#{$align} {
+                align-items: $align !important;
+            }
+        }
+    }
+}
+
+$flex-wrap: (
+    nowrap,
+    wrap,
+    wrap-reverse,
+);
+
+@each $wrap in $flex-wrap {
+    .flex-#{$wrap} {
+        flex-wrap: $wrap !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $wrap in $flex-wrap {
+            .flex-#{$breakpoint}-#{$wrap} {
+                flex-wrap: $wrap !important;
+            }
+        }
+    }
+}
+
+$flex-justify-content: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+);
+
+@each $justifyKey, $justifyValue in $flex-justify-content {
+    .justify-content-#{$justifyKey} {
+        justify-content: $justifyValue !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $justifyKey, $justifyValue in $flex-justify-content {
+            .justify-content-#{$breakpoint}-#{$justifyKey} {
+                justify-content: $justifyValue !important;
+            }
+        }
+    }
+}
+
+$flex-direction: (
+    row,
+    row-reverse,
+    column,
+    column-reverse,
+);
+
+@each $direction in $flex-direction {
+    .flex-#{$direction} {
+        flex-direction: $direction !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $direction in $flex-direction {
+            .flex-#{$breakpoint}-#{$direction} {
+                flex-direction: $direction !important;
+            }
+        }
+    }
+}
+
+$flex-grow: (
+    0,
+    1,
+);
+
+@each $grow in $flex-grow {
+    .flex-grow-#{$grow} {
+        flex-grow: $grow !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $grow in $flex-grow {
+            .flex-grow-#{$breakpoint}-#{$grow} {
+                flex-grow: $grow !important;
+            }
+        }
+    }
+}
+
+$flex-order: (
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+);
+
+@each $order in $flex-order {
+    .order-#{$order} {
+        order: $order !important;
+    }
+}
+
+// responsive
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $order in $flex-order {
+            .order-#{$breakpoint}-#{$order} {
+                order: $order !important;
+            }
+        }
+    }
+}

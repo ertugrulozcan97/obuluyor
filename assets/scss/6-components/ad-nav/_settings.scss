@@ -1,0 +1,60 @@
+@use '../../variables' as *;
+
+$container: (
+    'border-width': 1px,
+    'border-style': solid,
+    'border-radius': .25rem
+);
+
+$section: (
+    'header-border-width': 1px,
+    'header-border-style': solid,
+
+    'header-padding-x': 1rem,
+    'header-padding-y': .5rem,
+
+    'header-content-gap': .5rem,
+
+    'header-icon-size': 1rem,
+    'header-icon-img-size': 1.5rem,
+
+    'header-label-font-size': .9375rem,
+    'header-label-font-weight': 500,
+
+    'body-padding-y': .5rem,
+    'body-padding-x': 1.5rem
+);
+
+$menu: (
+    'padding-start': 1.5rem,
+
+    'content-gap': .25rem,
+
+    'item-font-size': .875rem,
+    'item-font-weight': 500,
+
+    'item-count-font-size': .6875rem,
+    'item-count-font-weight': 500
+);
+
+$theme-colors-container: (
+    'default': (
+        'bg': map-get($colors, 'neutral-0'),
+        'border': map-get($colors, 'neutral-300'),
+    )
+);
+
+$theme-colors-section: (
+    'default': (
+        'label': map-get($colors, 'neutral-800'),
+        'border': map-get($colors, 'neutral-200'),
+    )
+);
+
+$theme-colors-menu: (
+    'default': (
+        'item': map-get($colors, 'link'),
+        'item-hover': map-get($colors, 'neutral-800'),
+        'item-count': map-get($colors, 'neutral-500')
+    )
+);

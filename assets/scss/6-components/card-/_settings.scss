@@ -1,0 +1,51 @@
+@use '../../variables' as *;
+
+
+
+$button: (
+    'font-size': .875rem,
+    'font-weight': 400,
+    'height': '100%',
+    'width': '2.5rem',
+);
+
+$theme-colors-container: (
+    'dark': (
+        'default': (
+            'bg': map-get($colors, 'neutral-800'),
+            'text': map-get($colors, 'neutral-100'),
+            'border': transparent,
+        ),
+        'focus': (
+            'bg': map-get($colors, 'neutral-800'),
+            'text': map-get($colors, 'neutral-100'),
+            'border': map-get($colors, 'neutral-0')
+        )
+    )
+);
+
+$theme-colors-input: (
+    'dark': (
+        'default': (
+            'bg': map-get($colors, 'neutral-800'),
+            'text': map-get($colors, 'neutral-100'),
+            'placeholder': map-get($colors, 'neutral-500'),
+            'border': transparent,
+        ),
+        'focus': (
+            'bg': map-get($colors, 'neutral-800'),
+            'text': map-get($colors, 'neutral-100'),
+            'placeholder': map-get($colors, 'neutral-500'),
+            'border': map-get($colors, 'neutral-0'),
+        ),
+    )
+);
+
+$theme-colors-button: (
+    'dark': (
+        'default': (
+            'bg': map-get($colors, 'neutral-900'),
+            'text': map-get($colors, 'neutral-100'),
+        ),
+    ),
+);

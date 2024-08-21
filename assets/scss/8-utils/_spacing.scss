@@ -1,0 +1,403 @@
+// Paddings
+
+@each $key, $value in $spacings {
+    .p-#{$key} {
+        padding: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .p-#{$breakpoint}-#{$key} {
+                padding: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .pt-#{$key} {
+        padding-top: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .pt-#{$breakpoint}-#{$key} {
+                padding-top: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .pe-#{$key} {
+        padding-right: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .pe-#{$breakpoint}-#{$key} {
+                padding-right: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .pb-#{$key} {
+        padding-bottom: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .pb-#{$breakpoint}-#{$key} {
+                padding-bottom: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .ps-#{$key} {
+        padding-left: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .ps-#{$breakpoint}-#{$key} {
+                padding-left: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .px-#{$key} {
+        padding-left: $value !important;
+        padding-right: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .px-#{$breakpoint}-#{$key} {
+                padding-left: $value !important;
+                padding-right: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .py-#{$key} {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .py-#{$breakpoint}-#{$key} {
+                padding-top: $value !important;
+                padding-bottom: $value !important;
+            }
+        }
+    }
+}
+
+// Margins
+
+@each $key, $value in $spacings {
+    .m-#{$key} {
+        margin: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .m-#{$breakpoint}-#{$key} {
+                margin: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .mt-#{$key} {
+        margin-top: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .mt-#{$breakpoint}-#{$key} {
+                margin-top: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .me-#{$key} {
+        margin-right: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .me-#{$breakpoint}-#{$key} {
+                margin-right: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .mb-#{$key} {
+        margin-bottom: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .mb-#{$breakpoint}-#{$key} {
+                margin-bottom: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .ms-#{$key} {
+        margin-left: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .ms-#{$breakpoint}-#{$key} {
+                margin-left: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .mx-#{$key} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .mx-#{$breakpoint}-#{$key} {
+                margin-left: $value !important;
+                margin-right: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .my-#{$key} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .my-#{$breakpoint}-#{$key} {
+                margin-top: $value !important;
+                margin-bottom: $value !important;
+            }
+        }
+    }
+}
+
+// Negative Margins
+
+@each $key, $value in $spacings {
+    .-m-#{$key} {
+        margin: -$value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .-m-#{$breakpoint}-#{$key} {
+                margin: -$value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .-mt-#{$key} {
+        margin-top: -$value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .-mt-#{$breakpoint}-#{$key} {
+                margin-top: -$value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .-me-#{$key} {
+        margin-right: -$value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .-me-#{$breakpoint}-#{$key} {
+                margin-right: -$value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .-mb-#{$key} {
+        margin-bottom: -$value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .-mb-#{$breakpoint}-#{$key} {
+                margin-bottom: -$value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .-ms-#{$key} {
+        margin-left: -$value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .-ms-#{$breakpoint}-#{$key} {
+                margin-left: -$value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .-mx-#{$key} {
+        margin-left: -$value !important;
+        margin-right: -$value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .-mx-#{$breakpoint}-#{$key} {
+                margin-left: -$value !important;
+                margin-right: -$value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .-my-#{$key} {
+        margin-top: -$value !important;
+        margin-bottom: -$value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .-my-#{$breakpoint}-#{$key} {
+                margin-top: -$value !important;
+                margin-bottom: -$value !important;
+            }
+        }
+    }
+}
+
+// Gap
+
+@each $key, $value in $spacings {
+    .gap-#{$key} {
+        gap: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .gap-#{$breakpoint}-#{$key} {
+                gap: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .gap-x-#{$key} {
+        column-gap: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .gap-x-#{$breakpoint}-#{$key} {
+                column-gap: $value !important;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacings {
+    .gap-y-#{$key} {
+        row-gap: $value !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @each $key, $value in $spacings {
+            .gap-y-#{$breakpoint}-#{$key} {
+                row-gap: $value !important;
+            }
+        }
+    }
+}

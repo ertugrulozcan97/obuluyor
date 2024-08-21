@@ -1,0 +1,39 @@
+@use 'settings' as settings;
+
+.site-header {
+    padding: settings.$padding-y settings.$padding-x;
+    border-bottom: 1px solid transparent;
+}
+
+.site-header-logo {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.site-header
+{
+    @each $theme, $color in settings.$theme-colors
+    {
+        $bg: map-get($color, 'bg');
+        $border: map-get($color, 'border');
+        $text: map-get($color, 'text');
+
+        @if ($theme == 'default')
+        {
+            background-color: #{$bg};
+            border-color: #{$border};
+            color: #{$text};
+        }
+        @else
+        {
+            &-#{$theme}
+            {
+                background-color: #{$bg};
+                border-color: #{$border};
+                color: #{$text};
+            }
+            
+        }
+    }
+}

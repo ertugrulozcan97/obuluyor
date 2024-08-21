@@ -1,0 +1,89 @@
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $grid-container-padding;
+    padding-right: $grid-container-padding;
+
+    @each $breakpoint, $value in $breakpoints {
+        @include media-up($breakpoint) {
+            max-width: map-get($container-max-widths, $breakpoint);
+        }
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $grid-container-padding;
+    padding-right: $grid-container-padding;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$grid-container-padding;
+    margin-right: -$grid-container-padding;
+
+    > * {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-left: $grid-container-padding;
+        padding-right: $grid-container-padding;
+    }
+}
+
+
+.col {
+    flex: 1;
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        flex: 0 0 calc(100% / 12 * #{$i});
+        max-width: calc(100% / 12 * #{$i});
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        .col-#{$breakpoint} {
+            flex: 1;
+        }
+        .col-#{$breakpoint}-auto {
+            flex: 0 0 auto;
+            width: auto;
+            max-width: none;
+        }
+        @for $i from 1 through 12 {
+            .col-#{$breakpoint}-#{$i} {
+                flex: 0 0 calc(100% / 12 * #{$i});
+                max-width: calc(100% / 12 * #{$i});
+            }
+        }
+    }
+}
+
+@for $i from 1 through 11 {
+    .offset-#{$i} {
+        margin-left: calc(100% / 12 * #{$i}) !important;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include media-up($breakpoint) {
+        @for $i from 1 through 11 {
+            .offset-#{$breakpoint}-#{$i} {
+                margin-left: calc(100% / 12 * #{$i}) !important;
+            }
+        }
+    }
+}
