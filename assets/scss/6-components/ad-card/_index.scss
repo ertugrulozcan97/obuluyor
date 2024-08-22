@@ -1,0 +1,77 @@
+@use './settings' as settings;
+
+.ad-card
+{
+    // Fix grid layout breaking
+    min-width: 0;
+
+    &:hover
+    {
+        .ad-card-title {
+            text-decoration: underline;
+        }
+    }
+}
+
+.ad-card-header
+{
+    border-width: map-get(settings.$header, 'border-width');
+    border-style: map-get(settings.$header, 'border-style');
+    border-radius: map-get(settings.$header, 'border-radius');
+    overflow: map-get(settings.$header, 'overflow');
+}
+
+.ad-card-img
+{
+    aspect-ratio: map-get(settings.$img, 'aspect-ratio');
+    display: block;
+}
+
+.ad-card-body
+{
+    overflow: hidden;
+    padding: map-get(settings.$body, 'padding-y') map-get(settings.$body, 'padding-x');
+}
+
+.ad-card-title
+{
+    display: block;
+    font-size: map-get(settings.$title, 'font-size');
+    font-weight: map-get(settings.$title, 'font-weight');
+    line-height: map-get(settings.$title, 'line-height');
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ad-card-subtitle
+{
+    font-size: map-get(settings.$subtitle, 'font-size');
+    font-weight: map-get(settings.$subtitle, 'font-weight');
+    line-height: map-get(settings.$subtitle, 'line-height');
+    opacity: map-get(settings.$subtitle, 'opacity');
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ad-card
+{
+    @each $color, $property in settings.$theme-colors-container
+    {
+        @if ($color == 'default')
+        {
+            $header: map-get(settings.$theme-colors-header, 'default');
+
+            border-color: map-get($property, 'border');
+
+            .ad-card-header
+            {
+                background-color: map-get($header, 'bg');
+                border-color: map-get($header, 'border');
+            }
+        }
+    }
+}

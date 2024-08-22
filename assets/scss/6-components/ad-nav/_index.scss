@@ -1,6 +1,8 @@
 @use 'settings' as settings;
 
 .ad-nav {
+    position: map-get(settings.$container, 'position');
+    top: map-get(settings.$container, 'top');
     border-width: map-get(settings.$container, 'border-width');
     border-style: map-get(settings.$container, 'border-style');
     border-radius: map-get(settings.$container, 'border-radius');

@@ -1,0 +1,16 @@
+@use 'settings' as settings;
+
+.ad-list-grid
+{
+    display: grid;
+    gap: map-get(settings.$grid, 'gap');
+    grid-template-columns: repeat(map-get(settings.$grid, 'columns'), 1fr);
+
+    @each $breakpoint, $value in map-get(settings.$grid, 'responsive')
+    {
+        @include media-up($breakpoint)
+        {
+            grid-template-columns: repeat(map-get($value, 'columns'), 1fr);
+        }
+    }
+}

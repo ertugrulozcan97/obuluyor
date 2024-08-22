@@ -55,8 +55,60 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
+}
+
+display1 {
+  font-size: 6rem;
+}
+
+display2 {
+  font-size: 5rem;
+}
+
+display3 {
+  font-size: 4rem;
+}
+
+display4 {
+  font-size: 3rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+body {
+  font-size: 0.9375rem;
+}
+
+small {
+  font-size: 0.8125rem;
+}
+
+tiny {
+  font-size: 0.625rem;
 }
 
 .container {
@@ -1016,6 +1068,8 @@ html {
 }
 
 .ad-nav {
+  position: sticky;
+  top: 1rem;
   border-width: 1px;
   border-style: solid;
   border-radius: 0.25rem;
@@ -1149,6 +1203,128 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding: 1rem 1.5rem;
+}
+
+.card-title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.card-toolbar {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-body {
+  padding: 1rem 1.5rem;
+}
+
+.card {
+  border-color: #dee2e6;
+}
+.card .card-header {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.ad-list-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 576px) {
+  .ad-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .ad-list-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .ad-list-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .ad-list-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.ad-card {
+  min-width: 0;
+}
+.ad-card:hover .ad-card-title {
+  text-decoration: underline;
+}
+
+.ad-card-header {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.ad-card-img {
+  aspect-ratio: 1.3333333333;
+  display: block;
+}
+
+.ad-card-body {
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.ad-card-title {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ad-card-subtitle {
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: 1;
+  opacity: 0.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ad-card {
+  border-color: #dee2e6;
+}
+.ad-card .ad-card-header {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
 }
 
 .d-none {

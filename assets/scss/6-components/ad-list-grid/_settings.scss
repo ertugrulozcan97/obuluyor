@@ -1,0 +1,20 @@
+@use '../../variables' as *;
+
+$grid: (
+    'gap': 1rem,
+    'columns': 2,
+    'responsive': (
+        'sm': (
+            'columns': 2,
+        ),
+        'md': (
+            'columns': 5,
+        ),
+        'lg': (
+            'columns': 6,
+        ),
+        'xl': (
+            'columns': 7,
+        ),
+    )
+);

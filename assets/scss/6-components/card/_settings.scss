@@ -1,0 +1,44 @@
+@use '../../variables' as *;
+
+
+$container: (
+    'border-width': 1px,
+    'border-style': solid,
+    'border-radius': 0.25rem,
+    'overflow': hidden,
+    'box-shadow': 0 4px 10px 0 rgba(0, 0, 0, 0.05),
+);
+
+$header: (
+    'padding-x': 1.5rem,
+    'padding-y': 1rem,
+    'border-width': 1px,
+    'border-style': solid,
+);
+
+$title: (
+    'font-size': map-get($font-sizes, 'body'),
+    'font-weight': 500,
+);
+
+$toolbar: (
+    'content-gap': 0.5rem,
+);
+
+$body: (
+    'padding-x': 1.5rem,
+    'padding-y': 1rem,
+);
+
+$theme-colors-container: (
+    'default': (
+        'border': map-get($colors, 'neutral-300'),
+    )
+);
+
+$theme-colors-header: (
+    'default': (
+        'bg': map-get($colors, 'neutral-100'),
+        'border': map-get($colors, 'neutral-300'),
+    )
+);
