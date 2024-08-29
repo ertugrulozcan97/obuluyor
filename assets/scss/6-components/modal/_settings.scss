@@ -1,0 +1,54 @@
+@use '../../variables' as *;
+
+$header: (
+    'padding': 1rem,
+    'border-style': solid,
+    'border-width': 1px,
+    'spacing': 1rem
+);
+
+$title: (
+    'font-size': 1.125rem,
+    'font-weight': 600,
+);
+
+$body: (
+    'padding': 1rem,
+);
+
+$footer: (
+    'padding': 1rem,
+    'border-style': solid,
+    'border-width': 1px,
+    'spacing': 1rem
+);
+
+$close: (
+    'width': 2rem,
+    'height': 2rem,
+    'font-size': 1.25rem,
+    'radius': 50%,
+);
+
+$content-theme-colors: (
+    'bg': map-get($colors, 'white'),
+);
+
+$header-theme-colors: (
+    'border': map-get($colors, 'neutral-200'),
+);
+
+$title-theme-colors: (
+    'color': map-get($colors, 'neutral-900'),
+);
+
+$footer-theme-colors: (
+    'border': map-get($colors, 'neutral-200'),
+);
+
+$close-theme-colors: (
+    'bg': map-get($colors, 'neutral-200'),
+    'color': map-get($colors, 'neutral-500'),
+    'bg-hover': map-get($colors, 'neutral-300'),
+    'color-hover': map-get($colors, 'neutral-500'),
+);

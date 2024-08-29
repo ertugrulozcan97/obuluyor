@@ -1,0 +1,31 @@
+$radius-values: (
+    none: 0,
+    1: .125rem,
+    2: .25rem,
+    3: .5rem,
+    4: 1rem,
+    5: 1.5rem,
+    6: 3rem,
+    full: 9999px,
+);
+
+@each $radius-name, $radius-value in $radius-values {
+    .rounded-#{$radius-name} {
+        border-radius: $radius-value !important;
+    }
+}
+
+$radius-positions: (
+    top-left,
+    top-right,
+    bottom-right,
+    bottom-left,
+);
+
+@each $radiusPosition in $radius-positions {
+    @each $radiusValueKey, $radiusValue in $radius-values {
+        .rounded-#{$radiusPosition}-#{$radiusValueKey} {
+            border-#{$radiusPosition}-radius: $radiusValue !important;
+        }
+    }
+}

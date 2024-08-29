@@ -1,0 +1,32 @@
+@use '../../variables' as *;
+
+$form-control: (
+    'width': 100%,
+    'padding-x': .75rem,
+    'padding-y': .5rem,
+    'border-radius': .25rem,
+    'border-width': 1px,
+    'border-style': solid,
+    'font-size': .9375rem,
+    'font-weight': 500,
+);
+
+$theme-colors: (
+    'default': (
+        'default': (
+            'bg': map-get($colors, 'neutral-0'),
+            'border': map-get($colors, 'neutral-400'),
+            'text': map-get($colors, 'neutral-900'),
+        ),
+        'focus': (
+            'bg': map-get($colors, 'neutral-0'),
+            'text': map-get($colors, 'neutral-900'),
+            'border': map-get($colors, 'primary-500')
+        ),
+        'disabled': (
+            'bg': map-get($colors, 'neutral-100'),
+            'border': map-get($colors, 'neutral-200'),
+            'text': map-get($colors, 'neutral-600'),
+        ),
+    )
+);

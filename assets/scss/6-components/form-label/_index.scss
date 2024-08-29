@@ -1,0 +1,13 @@
+@use 'settings' as settings;
+
+.form-label {
+    display: block;
+    font-size: map-get(settings.$form-label, 'font-size');
+    font-weight: map-get(settings.$form-label, 'font-weight');
+    margin-bottom: map-get(settings.$form-label, 'margin-bottom');
+}
+
+.form-label
+{
+    color: map-get(settings.$theme-colors, 'text');
+}

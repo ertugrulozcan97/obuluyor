@@ -1,0 +1,43 @@
+@use 'settings' as settings;
+
+.form-control {
+    width: #{map-get(settings.$form-control, 'width')};
+    padding: map-get(settings.$form-control, 'padding-y') map-get(settings.$form-control, 'padding-x');
+    border-radius: map-get(settings.$form-control, 'border-radius');
+    border-width: map-get(settings.$form-control, 'border-width');
+    border-style: map-get(settings.$form-control, 'border-style');
+    font-size: map-get(settings.$form-control, 'font-size');
+    font-weight: map-get(settings.$form-control, 'font-weight');
+    transition: $transition-duration $transition-timing-function;   
+}
+
+.form-control
+{
+    @each $color, $state in settings.$theme-colors
+    {
+        $state-default: map-get($state, 'default');
+        $state-focus: map-get($state, 'focus');
+        $state-disabled: map-get($state, 'disabled');
+
+        @if ($color == 'default')
+        {
+            background-color: #{map-get($state-default, 'bg')};
+            color: #{map-get($state-default, 'text')};
+            border-color: #{map-get($state-default, 'border')};
+
+            &:focus
+            {
+                background-color: #{map-get($state-focus, 'bg')};
+                color: #{map-get($state-focus, 'text')};
+                border-color: #{map-get($state-focus, 'border')};
+            }
+
+            &:disabled,
+            &.disabled {
+                background-color: #{map-get($state-disabled, 'bg')};
+                color: #{map-get($state-disabled, 'text')};
+                border-color: #{map-get($state-disabled, 'border')};
+            }
+        }
+    }
+}
