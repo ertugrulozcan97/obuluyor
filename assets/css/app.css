@@ -59,6 +59,10 @@ html {
   line-height: 1.5;
 }
 
+p {
+  margin-bottom: 0.5rem;
+}
+
 display1 {
   font-size: 6rem;
 }
