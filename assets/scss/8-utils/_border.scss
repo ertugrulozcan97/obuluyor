@@ -92,3 +92,10 @@ $border-widths: (
         }
     }
 }
+
+// border color
+@each $color, $value in $colors {
+    .border-#{$color} {
+        border-color: #{$value} !important;
+    }
+}

@@ -1,0 +1,51 @@
+@use './settings' as settings;
+
+.tab {
+
+}
+
+.tab-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: #{map-get(settings.$nav, 'spacing')};
+
+    border-bottom-width: #{map-get(settings.$nav, 'border-width')};
+    border-bottom-style: #{map-get(settings.$nav, 'border-style')};
+    border-bottom-color: #{map-get(settings.$nav, 'border-color')};
+
+    &-item {
+        display: inline-flex;
+        align-items: center;
+        padding: #{map-get(settings.$nav, 'link-padding')};
+        gap: #{map-get(settings.$nav, 'link-spacing')};
+        background-color: #{map-get(settings.$nav, 'link-bg')};
+        border-width: #{map-get(settings.$nav, 'link-border-width')};
+        border-style: #{map-get(settings.$nav, 'link-border-style')};
+        border-color: #{map-get(settings.$nav, 'link-border-color')};
+        border-radius: #{map-get(settings.$nav, 'link-border-radius')};
+        border-bottom-color: transparent;
+        font-size: #{map-get(settings.$nav, 'link-font-size')};
+        font-weight: #{map-get(settings.$nav, 'link-font-weight')};
+        color: #{map-get(settings.$nav, 'link-text')};
+
+        &:hover {
+            background-color: #{map-get(settings.$nav, 'link-hover-bg')};
+            color: #{map-get(settings.$nav, 'link-hover-text')};
+            border-color: #{map-get(settings.$nav, 'link-hover-border-color')};
+        }
+
+        &.active {
+            background-color: #{map-get(settings.$nav, 'link-active-bg')};
+            color: #{map-get(settings.$nav, 'link-active-text')};
+            border-color: #{map-get(settings.$nav, 'link-active-border-color')};
+        }
+    }
+}
+
+.tab-pane {
+    &:not(.active) {
+        display: none;
+    }
+}

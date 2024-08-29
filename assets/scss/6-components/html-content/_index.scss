@@ -1,0 +1,35 @@
+@use '../../variables' as var;
+
+.html-content {
+    * {
+        line-height: 1.5;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        font-weight: 500;
+        color: #{map-get(var.$colors, 'neutral-700')};
+    }
+
+    ul, ol {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    li {
+        margin-bottom: .5rem;
+    }
+}

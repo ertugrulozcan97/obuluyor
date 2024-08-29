@@ -1,0 +1,29 @@
+@use '../../variables' as *;
+
+
+$nav: (
+    'spacing': .5rem,
+
+    'border-width': 2px,
+    'border-style': solid,
+    'border-color': map-get($colors, 'primary-500'),
+
+    'link-spacing': 1rem,
+    'link-padding': .5rem 1.5rem,
+    'link-font-size': map-get($font-sizes, h6),
+    'link-font-weight': 600,
+    'link-bg': map-get($colors, 'neutral-0'),
+    'link-text': map-get($colors, 'neutral-800'),
+    'link-border-style': solid,
+    'link-border-width': 1px,
+    'link-border-color': map-get($colors, 'neutral-200'),
+    'link-border-radius': .25rem .25rem 0 0,
+
+    'link-hover-bg': map-get($colors, 'neutral-300'),
+    'link-hover-text': map-get($colors, 'neutral-800'),
+    'link-hover-border-color': map-get($colors, 'neutral-200'),
+  
+    'link-active-bg': map-get($colors, 'primary-500'),
+    'link-active-text': map-get($colors, 'black'),
+    'link-active-border-color': map-get($colors, 'primary-500'),
+);

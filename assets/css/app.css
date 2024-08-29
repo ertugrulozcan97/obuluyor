@@ -1235,7 +1235,7 @@ tiny {
 
 .card-title {
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .card-toolbar {
@@ -1440,6 +1440,72 @@ tiny {
 }
 .ad-table tbody th {
   font-weight: 700;
+}
+
+.html-content * {
+  line-height: 1.5;
+}
+.html-content h1, .html-content h2, .html-content h3, .html-content h4, .html-content h5, .html-content h6 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.html-content p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #495057;
+}
+.html-content ul, .html-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.html-content ul {
+  list-style-type: disc;
+}
+.html-content ol {
+  list-style-type: decimal;
+}
+.html-content li {
+  margin-bottom: 0.5rem;
+}
+
+.tab-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 0.5rem;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #fd900f;
+}
+.tab-nav-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e9ecef;
+  border-radius: 0.25rem 0.25rem 0 0;
+  border-bottom-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #343a40;
+}
+.tab-nav-item:hover {
+  background-color: #dee2e6;
+  color: #343a40;
+  border-color: #e9ecef;
+}
+.tab-nav-item.active {
+  background-color: #fd900f;
+  color: #000000;
+  border-color: #fd900f;
+}
+
+.tab-pane:not(.active) {
+  display: none;
 }
 
 .d-none {
@@ -25402,6 +25468,394 @@ tiny {
 
 .border-none-w-10 {
   border-none-width: 10px !important;
+}
+
+.border-primary {
+  border-color: #fd900f !important;
+}
+
+.border-primary-100 {
+  border-color: #fde3c2 !important;
+}
+
+.border-primary-200 {
+  border-color: #fcd8a5 !important;
+}
+
+.border-primary-300 {
+  border-color: #fbcf8b !important;
+}
+
+.border-primary-400 {
+  border-color: #fbc471 !important;
+}
+
+.border-primary-500 {
+  border-color: #fd900f !important;
+}
+
+.border-primary-600 {
+  border-color: #e47f0e !important;
+}
+
+.border-primary-700 {
+  border-color: #c96f0d !important;
+}
+
+.border-primary-800 {
+  border-color: #ae5f0c !important;
+}
+
+.border-primary-900 {
+  border-color: #934f0b !important;
+}
+
+.border-secondary {
+  border-color: #2f3546 !important;
+}
+
+.border-secondary-100 {
+  border-color: #c1c4c9 !important;
+}
+
+.border-secondary-200 {
+  border-color: #a4a9b0 !important;
+}
+
+.border-secondary-300 {
+  border-color: #8a90a0 !important;
+}
+
+.border-secondary-400 {
+  border-color: #707b90 !important;
+}
+
+.border-secondary-500 {
+  border-color: #2f3546 !important;
+}
+
+.border-secondary-600 {
+  border-color: #2a2f3f !important;
+}
+
+.border-secondary-700 {
+  border-color: #242935 !important;
+}
+
+.border-secondary-800 {
+  border-color: #1f2130 !important;
+}
+
+.border-secondary-900 {
+  border-color: #191b2b !important;
+}
+
+.border-success {
+  border-color: #23c749 !important;
+}
+
+.border-success-100 {
+  border-color: #c2f1d1 !important;
+}
+
+.border-success-200 {
+  border-color: #9eeeb6 !important;
+}
+
+.border-success-300 {
+  border-color: #7be99d !important;
+}
+
+.border-success-400 {
+  border-color: #58e583 !important;
+}
+
+.border-success-500 {
+  border-color: #23c749 !important;
+}
+
+.border-success-600 {
+  border-color: #20b043 !important;
+}
+
+.border-success-700 {
+  border-color: #1d8f3c !important;
+}
+
+.border-success-800 {
+  border-color: #1a6e35 !important;
+}
+
+.border-success-900 {
+  border-color: #175c2f !important;
+}
+
+.border-info {
+  border-color: #09cae7 !important;
+}
+
+.border-info-100 {
+  border-color: #c9f1f5 !important;
+}
+
+.border-info-200 {
+  border-color: #a8e9f2 !important;
+}
+
+.border-info-300 {
+  border-color: #8adff0 !important;
+}
+
+.border-info-400 {
+  border-color: #6dd4ee !important;
+}
+
+.border-info-500 {
+  border-color: #09cae7 !important;
+}
+
+.border-info-600 {
+  border-color: #08b2cd !important;
+}
+
+.border-info-700 {
+  border-color: #0798b3 !important;
+}
+
+.border-info-800 {
+  border-color: #06809a !important;
+}
+
+.border-info-900 {
+  border-color: #056682 !important;
+}
+
+.border-warning {
+  border-color: #f7b500 !important;
+}
+
+.border-warning-100 {
+  border-color: #fde9c2 !important;
+}
+
+.border-warning-200 {
+  border-color: #fbdca5 !important;
+}
+
+.border-warning-300 {
+  border-color: #facf8b !important;
+}
+
+.border-warning-400 {
+  border-color: #f8c471 !important;
+}
+
+.border-warning-500 {
+  border-color: #f7b500 !important;
+}
+
+.border-warning-600 {
+  border-color: #e49f00 !important;
+}
+
+.border-warning-700 {
+  border-color: #c98a00 !important;
+}
+
+.border-warning-800 {
+  border-color: #ae7500 !important;
+}
+
+.border-warning-900 {
+  border-color: #935f00 !important;
+}
+
+.border-danger {
+  border-color: #ff4d4f !important;
+}
+
+.border-danger-100 {
+  border-color: #fdd1d2 !important;
+}
+
+.border-danger-200 {
+  border-color: #fba4a6 !important;
+}
+
+.border-danger-300 {
+  border-color: #f87a7c !important;
+}
+
+.border-danger-400 {
+  border-color: #f54f51 !important;
+}
+
+.border-danger-500 {
+  border-color: #ff4d4f !important;
+}
+
+.border-danger-600 {
+  border-color: #e63f41 !important;
+}
+
+.border-danger-700 {
+  border-color: #c93234 !important;
+}
+
+.border-danger-800 {
+  border-color: #b02a2c !important;
+}
+
+.border-danger-900 {
+  border-color: #942224 !important;
+}
+
+.border-neutral-0 {
+  border-color: #ffffff !important;
+}
+
+.border-neutral-100 {
+  border-color: #f8f9fa !important;
+}
+
+.border-neutral-200 {
+  border-color: #e9ecef !important;
+}
+
+.border-neutral-300 {
+  border-color: #dee2e6 !important;
+}
+
+.border-neutral-400 {
+  border-color: #ced4da !important;
+}
+
+.border-neutral-500 {
+  border-color: #adb5bd !important;
+}
+
+.border-neutral-600 {
+  border-color: #6c757d !important;
+}
+
+.border-neutral-700 {
+  border-color: #495057 !important;
+}
+
+.border-neutral-800 {
+  border-color: #343a40 !important;
+}
+
+.border-neutral-900 {
+  border-color: #212529 !important;
+}
+
+.border-neutral-1000 {
+  border-color: #000000 !important;
+}
+
+.border-feature {
+  border-color: #b100f7 !important;
+}
+
+.border-feature-100 {
+  border-color: #f1c2f9 !important;
+}
+
+.border-feature-200 {
+  border-color: #e5a5f7 !important;
+}
+
+.border-feature-300 {
+  border-color: #da8af5 !important;
+}
+
+.border-feature-400 {
+  border-color: #cf6ff3 !important;
+}
+
+.border-feature-500 {
+  border-color: #b100f7 !important;
+}
+
+.border-feature-600 {
+  border-color: #9a00d9 !important;
+}
+
+.border-feature-700 {
+  border-color: #8300bb !important;
+}
+
+.border-feature-800 {
+  border-color: #6c009d !important;
+}
+
+.border-feature-900 {
+  border-color: #550080 !important;
+}
+
+.border-link {
+  border-color: #4699f1 !important;
+}
+
+.border-link-hover {
+  border-color: #0070e7 !important;
+}
+
+.border-link-visited {
+  border-color: #4e4e4e !important;
+}
+
+.border-link-active {
+  border-color: #0056b3 !important;
+}
+
+.border-blue {
+  border-color: #003399 !important;
+}
+
+.border-blue-100 {
+  border-color: #c2d5ff !important;
+}
+
+.border-blue-200 {
+  border-color: #9fbaff !important;
+}
+
+.border-blue-300 {
+  border-color: #7da0ff !important;
+}
+
+.border-blue-400 {
+  border-color: #5b86ff !important;
+}
+
+.border-blue-500 {
+  border-color: #003399 !important;
+}
+
+.border-blue-600 {
+  border-color: #002e91 !important;
+}
+
+.border-blue-700 {
+  border-color: #002880 !important;
+}
+
+.border-blue-800 {
+  border-color: #00236e !important;
+}
+
+.border-blue-900 {
+  border-color: #001d5d !important;
+}
+
+.border-white {
+  border-color: #ffffff !important;
+}
+
+.border-black {
+  border-color: #000000 !important;
 }
 
 .position-static {
