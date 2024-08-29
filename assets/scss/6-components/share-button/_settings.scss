@@ -1,0 +1,26 @@
+@use '../../variables' as *;
+
+$button: (
+    'width': 1.5rem,
+    'height': 1.5rem,
+    'border-radius': .25rem,
+    'icon-size': .875rem
+);
+
+$theme-colors: (
+    'facebook': (
+        'bg': #395699,
+        'bg-hover': #2d3f5f,
+        'text': #ffffff
+    ),
+    'x': (
+        'bg': #000000,
+        'bg-hover': #333333,
+        'text': #ffffff
+    ),
+    'email': (
+        'bg': #8f8f8f,
+        'bg-hover': #6f6f6f,
+        'text': #ffffff
+    )
+);

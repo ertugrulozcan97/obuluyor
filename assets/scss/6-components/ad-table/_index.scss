@@ -1,0 +1,36 @@
+@use 'settings' as settings;
+
+.ad-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        tr {
+            border-bottom: 1px solid map-get(settings.$table, 'row-border-color');
+
+            th, td {
+                padding-bottom: .25rem;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom-style: map-get(settings.$table, 'row-border-style');
+            border-bottom-width: map-get(settings.$table, 'row-border-width');
+            border-bottom-color: map-get(settings.$table, 'row-border-color');
+        }
+
+        td, th {
+            padding: map-get(settings.$table, 'cell-padding') 0;
+            font-size: map-get(settings.$table, 'font-size');
+            font-weight: map-get(settings.$table, 'font-weight');
+            text-align: left;
+            width: 50%;
+        }
+
+        th {
+            font-weight: map-get(settings.$table, 'heading-cell-font-weight');
+        }
+    }
+}

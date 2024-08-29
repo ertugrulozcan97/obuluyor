@@ -1,0 +1,28 @@
+@use 'settings' as settings;
+
+.share-btn {
+    width: map-get(settings.$button, 'width');
+    height: map-get(settings.$button, 'height');
+    border-radius: map-get(settings.$button, 'border-radius');
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        font-size: map-get(settings.$button, 'icon-size');
+    }
+}
+
+.share-btn {
+    @each $name, $value in settings.$theme-colors {
+        &.share-btn-#{$name} {
+            background-color: map-get($value, 'bg');
+            color: map-get($value, 'text');
+
+            &:hover {
+                background-color: map-get($value, 'bg-hover');
+            }
+        }
+    }
+}

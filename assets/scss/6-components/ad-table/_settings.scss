@@ -1,0 +1,18 @@
+@use '../../variables' as *;
+
+$table: (
+    'font-size': map-get($font-sizes, 'small'),
+    'font-weight': map-get($font-weights, 'regular'),
+    'cell-padding': map-get($spacings, 1),
+    'row-border-width': 1px,
+    'row-border-color': map-get($colors, 'neutral-200'),
+    'row-border-style': dashed,
+    'heading-cell-font-weight': map-get($font-weights, 'bold'),
+);
+
+$theme-colors: (
+    'default': (
+        'text': map-get($colors, 'secondary-500'),
+        'text-hover': map-get($colors, 'primary-500'),
+    )
+);

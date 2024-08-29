@@ -94,6 +94,17 @@ $colors: (
     'link-visited': #4e4e4e,
     'link-active': #0056b3,
 
+    'blue': #003399,
+    'blue-100': '#c2d5ff',
+    'blue-200': '#9fbaff',
+    'blue-300': '#7da0ff',
+    'blue-400': '#5b86ff',
+    'blue-500': '#003399',
+    'blue-600': '#002e91',
+    'blue-700': '#002880',
+    'blue-800': '#00236e',
+    'blue-900': '#001d5d',
+
     'white': #ffffff,
     'black': #000000,
 );
@@ -125,6 +136,7 @@ $font-sizes: (
     h5: 1.125rem,
     h6: 1rem,
     body: .9375rem,
+    medium: .875rem,
     small: .8125rem,
     tiny: .625rem
 );
@@ -141,6 +153,7 @@ $font-sizes-mobile: (
     h5: 1rem,
     h6: .875rem,
     body: .875rem,
+    medium: .8125rem,
     small: .75rem,
     tiny: .6875rem
 );

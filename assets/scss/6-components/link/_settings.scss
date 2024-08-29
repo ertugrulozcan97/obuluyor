@@ -1,0 +1,19 @@
+@use '../../variables' as *;
+
+$link: (
+    'font-size': map-get($font-sizes, 'small'),
+    'font-weight': map-get($font-weights, 'medium'),
+    'spacing': map-get($spacings, 1),
+    'border-width': 1px,
+);
+
+$theme-colors: (
+    'default': (
+        'text': map-get($colors, 'secondary-500'),
+        'text-hover': map-get($colors, 'primary-500'),
+    ),
+    'blue': (
+        'text': map-get($colors, 'blue-500'),
+        'text-hover': map-get($colors, 'blue-600'),
+    ),
+);

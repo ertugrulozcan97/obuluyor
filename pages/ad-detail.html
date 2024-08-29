@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlan Detay - Obuluyor</title>
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/vendor/fancyui/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+
+    <style>
+        .product-thumb-img-wrapper {
+            transition: .3s ease;
+        }
+        .product-thumb-img-wrapper.active {
+            box-shadow: inset 0 0 0 2px black;
+        }
+    </style>
+</head>
+<body>
+    <!-- begin:: Site Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-3 d-flex align-items-center">
+                    <a href="../index.html" class="site-header-logo">
+                        <img src="../assets/img/logo/logo.png" alt="Obuluyor">
+                    </a>
+                </div>
+                <div class="col-xl-9">
+                    <div class="row">
+                        <!-- begin:: Site Header Search -->
+                        <div class="col-xl-6 d-flex align-items-center gap-x-3 flex-grow-1">
+                            <form action="" class="flex-grow-1">
+                                <div class="search-box search-box-dark">
+                                    <input type="text" placeholder="Kelime veya ilan numarasına göre ara..." class="search-box-input">
+                                    <button type="submit" class="search-box-btn">
+                                        <span class="search-box-btn-icon">
+                                            <i class="far fa-search"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                            <button type="button" class="link-btn fs-small fw-500 text-hover-secondary transition-all">
+                                Hızlı Ara
+                            </button>
+                        </div>
+                        <!-- end:: Site Header Search -->
+
+                        <!-- begin:: Site Header Actions -->
+                        <div class="col-xl-auto d-flex align-items-center ms-auto gap-x-4">
+                            <a href="pages/auth-register.html" class="fs-small fw-500 text-hover-secondary transition-all">
+                                <i class="fas fa-user-plus me-1"></i>
+                                Üye Ol
+                            </a>
+                            <a href="pages/auth-login.html" class="fs-small fw-500 text-hover-secondary transition-all">
+                                <i class="fas fa-sign-in-alt me-1"></i>
+                                Giriş Yap
+                            </a>
+
+                            <a href="pages/ad-create.html" class="btn btn-dark shadow-none">
+                                Ücretsiz İlan Ver
+                            </a>
+                        </div>
+                        <!-- end:: Site Header Actions -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end:: Site Header -->
+
+    <!-- begin:: Site Main -->
+    <main class="site-main">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="border-bottom pb-2">
+                        <div class="row gap-y-2">
+                            <div class="col-12 col-md">
+                                <h1 class="fs-h5 fs-md-h4 fw-600">PASSAT 1.6 TDI OTOMATİK</h1>
+                            </div>
+                            <div class="col-12 d-none d-md-block col-md-auto">
+                                <div class="d-flex align-items-end gap-x-5 flex-nowrap overflow-y-hidden overflow-x-auto">
+                                    <div class="d-flex gap-x-4">
+                                        <a href="#" class="link">
+                                            <i class="fas fa-star"></i>
+                                            Favorilere Ekle
+                                        </a>
+                                        <a href="#" class="link">
+                                            <i class="fas fa-print"></i>
+                                            Yazdır
+                                        </a>
+                                    </div>
+                                    <div class="d-flex gap-x-2">
+                                        <a href="#" class="share-btn share-btn-facebook" title="Facebook ile Paylaş">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="#" class="share-btn share-btn-x" title="X ile Paylaş">
+                                            <i class="fab fa-x-twitter"></i>
+                                        </a>
+                                        <a href="#" class="share-btn share-btn-email" title="E-posta ile Paylaş">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row py-3">
+                        <div class="col-md-8 col-xl-9">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <!-- begin:: Ad Detail Image -->
+                                    <div class="border">
+                                        <img src="../assets/img/demo-ad/ilan-1.jpg" alt="" id="previewActiveImage" class="w-100">
+                                    </div>
+                                    <!-- end:: Ad Detail Image -->
+                                    <!-- begin:: Ad Detail Gallery -->
+                                    <div class="border">
+                                        <div class="d-flex bg-neutral-200">
+                                            <div class="col d-flex align-items-center justify-content-center py-2">
+                                                <a href="../assets/img/demo-ad/ilan-1.jpg" class="link link-blue fs-medium fw-700" id="previewActiveImageBtn" data-fancybox="gallery">
+                                                    <i class="far fa-magnifying-glass-plus"></i>
+                                                    Büyük Fotoğraf
+                                                </a>
+                                            </div>
+                                            <div class="col d-flex align-items-center justify-content-center py-2">
+                                                <a href="#" class="link link-blue fs-medium fw-700 disabled">
+                                                    <i class="far fa-circle-play"></i>
+                                                    Video
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="product-thumb-slider swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="d-flex flex-wrap">
+                                                            <!-- <a href="../assets/img/demo-ad/ilan-1.jpg" data-fancybox="gallery"></a> -->
+                                                            <a href="../assets/img/demo-ad/ilan-2.jpg" data-fancybox="gallery"></a>
+                                                            <a href="../assets/img/demo-ad/ilan-3.jpg" data-fancybox="gallery"></a>
+                                                            <a href="../assets/img/demo-ad/ilan-4.jpg" data-fancybox="gallery"></a>
+                                                            <a href="../assets/img/demo-ad/ilan-5.jpg" data-fancybox="gallery"></a>
+                                                            <a href="../assets/img/demo-ad/ilan-6.jpg" data-fancybox="gallery"></a>
+                                                            <a href="../assets/img/demo-ad/ilan-7.jpg" data-fancybox="gallery"></a>
+
+                                                            <div class="w-20 p-1 product-thumb-img-wrapper">
+                                                                <a href="../assets/img/demo-ad/ilan-1.jpg" data-fancybox-target="gallery">
+                                                                    <img src="../assets/img/demo-ad/ilan-1.jpg" alt="" class="w-100">
+                                                                </a>
+                                                            </div>
+                                                            <div class="w-20 p-1 product-thumb-img-wrapper">
+                                                                <a href="../assets/img/demo-ad/ilan-2.jpg" data-fancybox-target="gallery">
+                                                                    <img src="../assets/img/demo-ad/ilan-2.jpg" alt="" class="w-100">
+                                                                </a>
+                                                            </div>
+                                                            <div class="w-20 p-1 product-thumb-img-wrapper">
+                                                                <a href="../assets/img/demo-ad/ilan-3.jpg" data-fancybox-target="gallery">
+                                                                    <img src="../assets/img/demo-ad/ilan-3.jpg" alt="" class="w-100">
+                                                                </a>
+                                                            </div>
+                                                            <div class="w-20 p-1 product-thumb-img-wrapper">
+                                                                <a href="../assets/img/demo-ad/ilan-4.jpg" data-fancybox-target="gallery">
+                                                                    <img src="../assets/img/demo-ad/ilan-4.jpg" alt="" class="w-100">
+                                                                </a>
+                                                            </div>
+                                                            <div class="w-20 p-1 product-thumb-img-wrapper">
+                                                                <a href="../assets/img/demo-ad/ilan-5.jpg" data-fancybox-target="gallery">
+                                                                    <img src="../assets/img/demo-ad/ilan-5.jpg" alt="" class="w-100">
+                                                                </a>
+                                                            </div>
+                                                            <div class="w-20 p-1 product-thumb-img-wrapper">
+                                                                <a href="../assets/img/demo-ad/ilan-6.jpg" data-fancybox-target="gallery">
+                                                                    <img src="../assets/img/demo-ad/ilan-6.jpg" alt="" class="w-100">
+                                                                </a>
+                                                            </div>
+                                                            <div class="w-20 p-1 product-thumb-img-wrapper">
+                                                                <a href="../assets/img/demo-ad/ilan-7.jpg" data-fancybox-target="gallery">
+                                                                    <img src="../assets/img/demo-ad/ilan-7.jpg" alt="" class="w-100">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end:: Ad Detail Gallery -->
+                                </div>
+                                <div class="col-md-4">
+                                    <!-- begin:: Ad Detail Sidebar -->
+                                    <div class="d-flex flex-column">
+                                        <div class="text-blue fw-700 fs-h6 mb-3">
+                                            975.000 TL
+                                        </div>
+
+                                        <!-- begin:: Ad Detail Table -->
+                                        <table class="ad-table">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="d-flex gap-x-2 flex-nowrap overflow-y-hidden overflow-x-auto">
+                                                            <a href="#" class="link link-blue fs-small fw-700 fs-medium">
+                                                                Sinop
+                                                            </a>
+                                                            /
+                                                            <a href="#" class="link link-blue fs-small fw-700 fs-medium">
+                                                                Merkez
+                                                            </a>
+                                                            /
+                                                            <a href="#" class="link link-blue fs-small fw-700 fs-medium">
+                                                                İncedayı Mh.
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>İlan No</th>
+                                                    <td>1182886566</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>İlan Tarihi</th>
+                                                    <td>05 Ağustos 2024</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Marka</th>
+                                                    <td>Volkswagen</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Seri</th>
+                                                    <td>Passat</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Model</th>
+                                                    <td>1.6 TDI BlueMotion Trendline</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Yıl</th>
+                                                    <td>2015</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Yakıt</th>
+                                                    <td>Dizel</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Vites</th>
+                                                    <td>Otomatik</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Araç Durumu</th>
+                                                    <td>İkinci El</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>KM</th>
+                                                    <td>221.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Kasa Tipi</th>
+                                                    <td>Sedan</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Motor</th>
+                                                    <td>Gücü 120 hp</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Motor Hacmi</th>
+                                                    <td>1598 cc</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Çekiş</th>
+                                                    <td>Önden Çekiş</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Renk</th>
+                                                    <td>Gri</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Garanti</th>
+                                                    <td>Hayır</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Ağır</th>
+                                                    <td>Hasar Kayıtlı Hayır</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Plaka / Uyruk</th>
+                                                    <td>Türkiye (TR) Plakalı</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Kimden</th>
+                                                    <td class="text-danger">Sahibinden</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Takas</th>
+                                                    <td>Hayır</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- end:: Ad Detail Table -->
+                                    </div>
+                                    <!-- end:: Ad Detail Sidebar -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xl-3">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- end:: Site Main -->
+
+    <!-- begin:: Vendor Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/fancyui/fancybox/fancybox.umd.js"></script>
+
+    <!-- begin:: App Scripts -->
+    <script src="../assets/js/app.js"></script>
+
+    <!-- begin:: Page Scripts -->
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+            hideScrollbar: false,
+            on: {
+                reveal: (fancybox, slide) => {
+                // The content of this slide is loaded and ready to be revealed
+                slide.contentEl.style.filter = "brightness(1.25) contrast(1.25)";
+                },
+            },
+        });
+
+        $(document).on('click', '[data-fancybox-target]', function(e) {
+            e.preventDefault();
+
+            const imageLink = $(this).attr('href');
+
+            $('#previewActiveImageBtn').attr('href', imageLink);
+            $('#previewActiveImage').attr('src', imageLink);
+
+            $(this).closest('.product-thumb-img-wrapper').addClass('active').siblings().removeClass('active');
+        });
+
+        $(document).on('click', '#previewActiveImageBtn', function(e) {
+            e.preventDefault();
+
+            const imageLink = $(this).attr('href');
+        });
+
+        $(document).on('click', '#previewActiveImage', function(e) {
+            e.preventDefault();
+
+            const imageLink = $(this).attr('src');
+        });
+    </script>
+</body>
+</html>
